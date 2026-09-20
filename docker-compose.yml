@@ -1,0 +1,13 @@
+services:
+  risk-api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      RISK_DB_PATH: /app/data/risk.db
+    volumes:
+      - risk-data:/app/data
+
+volumes:
+  risk-data:
+
